@@ -1,15 +1,15 @@
 <!-- Unit 12 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ yes ] $() Select by Element, ID AND Class 
+[ yes ] Use Three Different jQuery Methods 
+[ yes ] Add Five CSS Declarations
+[ yes ] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .addClass() method
 [ no ] Feature 2 - Use a variable in javaScript 
 [ no ] Feature 3 - Use .mouseover() method
-[ no ] Feature 4 - Use .show() method
+[ yes ] Feature 4 - Use .show() method
 [ no ] Feature 5 - Use .append() method
 -->
 
@@ -21,42 +21,100 @@ Select ONE Additional
     <title>Unit 12 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+  <style>
+    body {
+      background-color: rgb(17, 67, 104);
+    }
+    .photo {
+      width: 200px;
+      margin: 20px;
+      border: 5px solid rgb(yellow);
+      padding: 5px;
+    }
+    
+  </style>
   <body>
-    <button id="mem1-button">Memory #1</button>
+  
+   
+    <h1>My Top 3 Memories of <span>THIS YEAR</span></h1>
+    <button id="mem1-button"><strong>Memory #1</strong></button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
-    <ol>
-      <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
-      </li>
+      <ol>
+        <li>
+          <h3 id="mem1">Senior Sunset</h3>
 
-      <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
-      </li>
+         
+          <p class= "some">
+            ME 
+          </p>
 
-      <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
-      </li>
-    </ol>
+          <img
+            id="seniors"
+            class="photo"
+            src="https://cdn.glitch.global/8f483286-a183-4756-a5ff-ae4fc316ff04/IMG_3684.JPG?v=1746239279814"
+            width="200"
+            style="display: none"
+          />
+        </li>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
-      });
+        
+        
+        <li>
+          <h3 id="mem2">Muesums!</h3>
+          <p>and GALLERIES</p>
+          <img
+            id="artwork"
+            class="photo"
+            src="https://cdn.glitch.global/8f483286-a183-4756-a5ff-ae4fc316ff04/thumbnails%2FIMG_1987.jpg?1746239271218"
+            width="200"
+            style="display: none"
+          />
+        </li>
 
-      $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
-      });
+            
+            
+        <li>
+          <h3 id="mem3">Hanging out with friends</h3>
+          <p class= "some">
+            ME 
+          </p>
+         
+           
+          <img
+            id="friends"
+            class="photo"
+            src="https://cdn.glitch.global/8f483286-a183-4756-a5ff-ae4fc316ff04/thumbnails%2FIMG_1988.jpg?1746239415910"
+            width="200"
+            style="display: none"
+          />
+        </li>
+      </ol>
 
-      $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
-      });
-    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script>
+         $("h1").text("TOP MEMORIES OF SENIOR YEAR");
+$(".some").text("ME + people");
+        
+        $("#mem1-button").click(function () {
+          $("#mem1").css("color", "white");
+          $("#seniors").show(2000);
+        });
+
+        $("#mem2-button").click(function () {
+          $("#mem2").css("color", "blue");
+          $("#artwork").show(2000);
+        });
+
+        $("#mem3-button").click(function () {
+          $("#mem3").css("color", "gray");
+          $("#friends").show(2000);
+          
+        });
+        
+       
+      </script>
+    
   </body>
 </html>
 
