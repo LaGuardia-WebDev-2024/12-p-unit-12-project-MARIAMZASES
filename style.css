@@ -7,8 +7,18 @@ html {
 
 img{
   border-radius: 30px;
+  border: 20px solid purple;
 }
 
 h1 {
   font-family: "Poetsen One", sans-serif;
+}
+h3{
+  font-size:30px;
+  color:purple;
+  background-color:blue;
+  font-family: cursive;
+  
+  
+  
 }
